@@ -1,21 +1,26 @@
+import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Random;
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
 public class Main {
     public static void main(String[] args) {
-        String str = "10 20 30";
-        Scanner scan = new Scanner(str);
+        int[] arr= new int[] {9,8,7,6,5,4,3,2,1};
+        Arrays.sort(arr);
+        for (int s : arr){
+            System.out.print(s+" ");
+        }
+        System.out.println("\n");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введіть значення для a: ");
+        String a = scanner.nextLine();
 
-        long seed = System.currentTimeMillis();
-        Random rand = new Random(seed);
+        System.out.print("Введіть значення для b: ");
+        String b = scanner.nextLine();
 
-        int temp1 = scan.nextInt();
+        System.out.print("Введіть значення для c: ");
+        String c = scanner.nextLine();
 
-        Scanner scankeybord = new Scanner(System.in);
-
-        System.out.print("Введіть значення temp2: ");
-        int temp2 = scankeybord.nextInt();
-
-        int temp3 = rand.nextInt(101);
-        System.out.println("Темп сума = "+ (temp1+temp2+temp3));
+        double result = (Double.parseDouble(a)*Double.parseDouble(b))/sqrt(pow(3,Double.parseDouble(c)));
+        System.out.println("Результат обчислення: " + result);
     }
 }
