@@ -7,7 +7,7 @@ public class Main {
         int[] arr= new int[] {9,8,7,6,5,4,3,2,1};
         Arrays.sort(arr);
         for (int s : arr){
-            System.out.print(s+" ");
+            System.out.print(s + " ");
         }
         System.out.println("\n");
         Scanner scanner = new Scanner(System.in);
